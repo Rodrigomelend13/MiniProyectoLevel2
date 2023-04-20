@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link de Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mulish:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Google Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Link de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+  <!-- Link de CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 500,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
+
+  
+
+  <script src="./js/app.js" type="module" defer></script>
+  <title>WINDBNB</title>
+</head>
+
+<body class="container">
+  <header class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-lg-4 mt-3 gap-5">
+    <div class="d-flex align-self-start">
+      <img src="./img/logo.png" alt="">
+    </div>
+
+    <article class="d-flex rounded-4 shadow p-1 mb-5 bg-white rounded" id="navSearch">
+      <p class="clickeable p-3 m-0 cursor-pointer user-select-none" id="opcionAdd">Add Location</p>
+      <p class="clickeable p-3 m-0 border-start border-end border-light-subtle user-select-none" id="opcionGuest">Add Guests</p>
+      <!-- Icono Search de google Icons -->
+      <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="openModal"><span class="material-symbols-outlined text-danger p-3 pointer user-select-none" id="btnModal">
+        search
+      </span></button>
+    </article>
+  </header>
+  <main>
+    <div class="d-flex mt-5 justify-content-between">
+      <h1 class="fs-3">Stays in 
+        <!-- Aquí va el lugar -->
+        <span id="place"></span>
+      </h1>
+      <p><span id="stays"></span> Stays</p>
+    </div>
+
+    <section class="container text-center" id="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="push">
+
+        <!-- Aqui van los cards, cada uno debe llevar la clase 'col' -->
+      
+         
+
+
+      </div>
+    </section>
+  </main>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen h-50  ">
+    <div class="modal-content">
+
+      <div class="modal-header d-lg-none  px-3 py-1">
+          <h5>Edit your search</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body py-lg-1 py-1 px-2">
+          <div class="container-fluid">
+
+            <div class="row py-3 gap-2 gap-lg-1 overflow-hidden justify-content-center  justify-content-lg-start"> 
+
+            <!-- aqui esta tipo select de location -->
+            <div class="col-lg-4 py-2 overflow-hidden justify-content-center border border-1 shadow-sm rounded-pill"  id="location">
+                <div class="fijo col-12 px-4"><div>LOCATION</div></div>
+                <div class="col-12 px-4"><div class="gris py-1" id="innerLocalidad">Add Location</div></div>
+            </div>
+
+            <!-- aqui esta para seleccionar Guest -->
+            <div class="col-lg-4  py-2 overflow-hidden justify-content-center border border-1 shadow-sm rounded-pill" id="guest">
+                <div class="fijo col-12 px-4"><div>GUEST</div></div>
+                <div class="col-12 px-4"><div class="gris py-1" id="innerGuest">Add Guests</div></div>
+            </div>
+
+            <div class="col-lg-2 d-none d-lg-flex justify-content-center bg-danger px-5 mx-5 rounded-pill"><button   type="button" class="btn d-flex text-light align-items-center px-5 mx-5 rounded-pill" data-bs-dismiss="modal" id="submitSearch"><span class="material-symbols-outlined text-light p-1 pointer user-select-none" id="btnModal">search</span>Search</button></div>
+           
+          </div>
+
+
+            <!--aqui estan las opciones del select location -->
+             
+            <div class="row col-lg-4 py-2 overflow-hidden" id="localidades">
+
+                   <!--opcion 1 -->
+              <div class="col-12 px-4"><div>
+                <a href="#"  class="op"  style="display: block; width: 48%; text-decoration:none;">
+                <div class="text-localidad my-2"> 
+                    <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <div class="etiqueta px-1"> <p class="cont-localidad text-dark py-1">Helsinki, Finland</p></div>
+                </div>
+              </a></div></div>
+
+
+                   <!--opcion 2 -->
+              <div class="col-12 px-4 typeOption"><div>
+                <a href="#"  class="op"  style="display: block; width: 48%; text-decoration:none;">
+                <div class="text-localidad my-2"> 
+                    <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <div class="etiqueta px-1"> <p class="cont-localidad text-dark py-1">Turku, Finland</p></div>
+                </div>
+              </a></div></div>
+
+
+                   <!--opcion 3 -->
+              <div class="col-12 px-4 typeOption"><div>
+                <a href="#"  class="op" style="display: block; width: 48%; text-decoration:none;">
+                <div class="text-localidad my-2"> 
+                    <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <div class="etiqueta px-1"> <p class="cont-localidad text-dark py-1">Oulu, Finland</p></div>
+                </div>
+              </a></div></div>
+
+                  <!--opcion 4 -->
+              <div class="col-12 px-4 typeOption"><div>
+                <a href="#" class="op"  style="display: block; width: 48%; text-decoration:none;">
+                <div class="text-localidad my-2"> 
+                    <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+                  <div class="etiqueta px-1"> <p class="cont-localidad text-dark py-1">Vaasa, Finland</p></div>
+                </div>
+              </a></div></div>  
+
+              <input type="hidden" name="localidades" id="inputLocalidades" value="">
+
+
+            </div>
+            <!-- TERMINE la lista de opciones -->
+
+
+            <!-- aqui escribire para el contador -->
+        <div class="justify-content-center mx-3 mx-lg-5 px-lg-5" id="contador">
+            <div class="row col-12 col-lg-4 py-3 overflow-hidden">
+
+                    <div class="d-flex flex-column  py-1"><p class="centrar py-0 my-0 px-0">Adults</p><p class="centrar1 py-0 my-0">Ages 13 or above</p></div>
+
+                    <div class="d-flex align-items-center gap-3 py-1">  
+                    <button id="restarAdult" class="contador border border-light-subtle bg-light rounded-1 px-0 py-0 d-flex align-items-center justify-content-center">-</button>
+                    <div id="textoAdult"><p class="my-1 text-body-secondary" id="adults">0</p></div>
+                    <button id="sumarAdult" class="contador border border-light-subtle bg-light rounded-1 px-0 py-0 d-flex align-items-center justify-content-center">+</button> </div>
+                    
+                    <div class="d-flex flex-column py-1"><p class="centrar2 py-0 my-0 px-0">Children</p><p class="centrar3 py-0 my-0">Ages 2-12</p></div>
+
+
+                    <div class="d-flex align-items-center gap-3 py-1">
+                      <button id="restarChild" class="contador border border-light-subtle bg-light rounded-1 px-0 py-0 align-items-center justify-content-center d-flex">-</button>
+                      <div id="textoChild"><p class="my-1 text-body-secondary" id="child">0</p></div>
+                      <button id="sumarChild" class="contador px-0 py-0 border border-light-subtle bg-light rounded-1 d-flex align-items-center justify-content-center">+</button></div>
+            </div>
+        </div>
+
+                        <!-- TERMINE de escrbir para el contador -->
+              
+
+          
+
+      <div class="mx-5 col-lg-2 d-flex d-lg-none justify-content-center bg-danger rounded-pill"><button   type="button" class="btn d-flex text-light align-items-center px-5 mx-5 rounded-pill" data-bs-dismiss="modal" id="miniSubmitSearch"><span class="material-symbols-outlined text-light p-1 pointer user-select-none" id="btnModal">search</span>Search</button></div>
+
+
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

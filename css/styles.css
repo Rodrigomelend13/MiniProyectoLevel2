@@ -1,0 +1,127 @@
+
+#opcionAdd{
+    color:#BDBDBD;
+}
+#opcionGuest{
+    color:#BDBDBD;
+}
+#cards {
+border-width:0;
+}
+#img-card{
+    height: 40vh;
+    object-fit: cover;
+}
+#text-info {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282;
+}
+#text-info1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+#localidades {
+    display: none;
+}
+#contador {
+    display:none;
+}
+#look{
+    background-color:#EB5757 !important;
+}
+.fijo{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 9px;
+    line-height: 11px;
+}
+.gris {
+    color:#BDBDBD;
+}
+.material-symbols-outlined {
+    color:#EB5757;
+}
+
+/* este es el codido CSS del modal */
+.material-symbols-outlined {
+    color: #4F4F4F;
+}
+.selectLocation.active {
+    display:flex;
+}
+.cont-localidad{
+    color:#4F4F4F;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+.text-localidad {
+    margin-top:0;
+    margin-left:0;
+    display:flex;
+    max-width:max-content;
+    height:100%;
+    overflow: hidden;
+    transition:ease;
+    background-color: #ffffff;
+}
+.text-localidad:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+.contador{
+    width: 20px;
+    height: 20px;
+}
+
+/* estas clases son para centrar los titulos del contador */
+.centrar {
+    margin-right: 33px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+}
+.centrar1{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color:#3333;
+}
+.centrar2{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    margin-right:20px;
+}
+.centrar3{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    margin-right:6px;
+    color:#3333;
+}
+
+
+
